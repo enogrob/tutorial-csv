@@ -1,0 +1,327 @@
+diff --git a/Gemfile b/Gemfile
+index ac8e4bc..a994150 100644
+--- a/Gemfile
++++ b/Gemfile
+@@ -1,14 +1,14 @@
+ source 'https://rubygems.org'
+ 
+ # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+-gem 'rails', '4.2.6.rc1'
++gem 'rails', '4.2.8'
+ 
+ group :production do
+   gem 'pg'
+ end
+ 
+ group :development do
+-  gem 'sqlite3'
++  gem 'sqlite3', '~> 1.3.6'
+ end
+ 
+ # Use SCSS for stylesheets
+diff --git a/Gemfile.lock b/Gemfile.lock
+index fb386fd..42e5da5 100644
+--- a/Gemfile.lock
++++ b/Gemfile.lock
+@@ -1,131 +1,128 @@
+ GEM
+   remote: https://rubygems.org/
+   specs:
+-    actionmailer (4.2.6.rc1)
+-      actionpack (= 4.2.6.rc1)
+-      actionview (= 4.2.6.rc1)
+-      activejob (= 4.2.6.rc1)
++    actionmailer (4.2.8)
++      actionpack (= 4.2.8)
++      actionview (= 4.2.8)
++      activejob (= 4.2.8)
+       mail (~> 2.5, >= 2.5.4)
+       rails-dom-testing (~> 1.0, >= 1.0.5)
+-    actionpack (4.2.6.rc1)
+-      actionview (= 4.2.6.rc1)
+-      activesupport (= 4.2.6.rc1)
++    actionpack (4.2.8)
++      actionview (= 4.2.8)
++      activesupport (= 4.2.8)
+       rack (~> 1.6)
+       rack-test (~> 0.6.2)
+       rails-dom-testing (~> 1.0, >= 1.0.5)
+       rails-html-sanitizer (~> 1.0, >= 1.0.2)
+-    actionview (4.2.6.rc1)
+-      activesupport (= 4.2.6.rc1)
++    actionview (4.2.8)
++      activesupport (= 4.2.8)
+       builder (~> 3.1)
+       erubis (~> 2.7.0)
+       rails-dom-testing (~> 1.0, >= 1.0.5)
+-      rails-html-sanitizer (~> 1.0, >= 1.0.2)
+-    activejob (4.2.6.rc1)
+-      activesupport (= 4.2.6.rc1)
++      rails-html-sanitizer (~> 1.0, >= 1.0.3)
++    activejob (4.2.8)
++      activesupport (= 4.2.8)
+       globalid (>= 0.3.0)
+-    activemodel (4.2.6.rc1)
+-      activesupport (= 4.2.6.rc1)
++    activemodel (4.2.8)
++      activesupport (= 4.2.8)
+       builder (~> 3.1)
+-    activerecord (4.2.6.rc1)
+-      activemodel (= 4.2.6.rc1)
+-      activesupport (= 4.2.6.rc1)
++    activerecord (4.2.8)
++      activemodel (= 4.2.8)
++      activesupport (= 4.2.8)
+       arel (~> 6.0)
+-    activesupport (4.2.6.rc1)
++    activesupport (4.2.8)
+       i18n (~> 0.7)
+-      json (~> 1.7, >= 1.7.7)
+       minitest (~> 5.1)
+       thread_safe (~> 0.3, >= 0.3.4)
+       tzinfo (~> 1.1)
+-    arel (6.0.3)
+-    bcrypt (3.1.11)
++    arel (6.0.4)
++    bcrypt (3.1.18)
+     bootstrap-sass (2.3.1.3)
+       sass (~> 3.2)
+-    builder (3.2.2)
++    builder (3.2.4)
+     coffee-rails (4.0.1)
+       coffee-script (>= 2.2.0)
+       railties (>= 4.0.0, < 5.0)
+     coffee-script (2.4.1)
+       coffee-script-source
+       execjs
+-    coffee-script-source (1.10.0)
+-    devise (4.1.1)
++    coffee-script-source (1.12.2)
++    concurrent-ruby (1.1.10)
++    crass (1.0.6)
++    devise (4.8.1)
+       bcrypt (~> 3.0)
+       orm_adapter (~> 0.1)
+-      railties (>= 4.1.0, < 5.1)
++      railties (>= 4.1.0)
+       responders
+       warden (~> 1.2.3)
+     erubis (2.7.0)
+-    execjs (2.7.0)
+-    globalid (0.3.6)
+-      activesupport (>= 4.1.0)
++    execjs (2.8.1)
++    globalid (0.4.2)
++      activesupport (>= 4.2.0)
+     hike (1.2.3)
+-    i18n (0.7.0)
++    i18n (0.9.5)
++      concurrent-ruby (~> 1.0)
+     jbuilder (1.5.3)
+       activesupport (>= 3.0.0)
+       multi_json (>= 1.2.0)
+-    jquery-rails (4.1.1)
++    jquery-rails (4.5.0)
+       rails-dom-testing (>= 1, < 3)
+       railties (>= 4.2.0)
+       thor (>= 0.14, < 2.0)
+-    json (1.8.3)
+-    loofah (2.0.3)
++    loofah (2.18.0)
++      crass (~> 1.0.2)
+       nokogiri (>= 1.5.9)
+-    mail (2.6.4)
+-      mime-types (>= 1.16, < 4)
+-    mime-types (3.1)
+-      mime-types-data (~> 3.2015)
+-    mime-types-data (3.2016.0521)
+-    mini_portile2 (2.1.0)
+-    minitest (5.9.0)
+-    multi_json (1.12.1)
+-    nokogiri (1.6.8)
+-      mini_portile2 (~> 2.1.0)
+-      pkg-config (~> 1.1.7)
++    mail (2.7.1)
++      mini_mime (>= 0.1.1)
++    mini_mime (1.1.2)
++    mini_portile2 (2.4.0)
++    minitest (5.15.0)
++    multi_json (1.15.0)
++    nokogiri (1.10.10)
++      mini_portile2 (~> 2.4.0)
+     orm_adapter (0.5.0)
+-    pg (0.18.4)
+-    pkg-config (1.1.7)
+-    rack (1.6.4)
++    pg (1.2.3)
++    rack (1.6.13)
+     rack-test (0.6.3)
+       rack (>= 1.0)
+-    rails (4.2.6.rc1)
+-      actionmailer (= 4.2.6.rc1)
+-      actionpack (= 4.2.6.rc1)
+-      actionview (= 4.2.6.rc1)
+-      activejob (= 4.2.6.rc1)
+-      activemodel (= 4.2.6.rc1)
+-      activerecord (= 4.2.6.rc1)
+-      activesupport (= 4.2.6.rc1)
++    rails (4.2.8)
++      actionmailer (= 4.2.8)
++      actionpack (= 4.2.8)
++      actionview (= 4.2.8)
++      activejob (= 4.2.8)
++      activemodel (= 4.2.8)
++      activerecord (= 4.2.8)
++      activesupport (= 4.2.8)
+       bundler (>= 1.3.0, < 2.0)
+-      railties (= 4.2.6.rc1)
++      railties (= 4.2.8)
+       sprockets-rails
+-    rails-deprecated_sanitizer (1.0.3)
++    rails-deprecated_sanitizer (1.0.4)
+       activesupport (>= 4.2.0.alpha)
+-    rails-dom-testing (1.0.7)
+-      activesupport (>= 4.2.0.beta, < 5.0)
+-      nokogiri (~> 1.6.0)
++    rails-dom-testing (1.0.9)
++      activesupport (>= 4.2.0, < 5.0)
++      nokogiri (~> 1.6)
+       rails-deprecated_sanitizer (>= 1.0.1)
+-    rails-html-sanitizer (1.0.3)
+-      loofah (~> 2.0)
+-    railties (4.2.6.rc1)
+-      actionpack (= 4.2.6.rc1)
+-      activesupport (= 4.2.6.rc1)
++    rails-html-sanitizer (1.4.3)
++      loofah (~> 2.3)
++    railties (4.2.8)
++      actionpack (= 4.2.8)
++      activesupport (= 4.2.8)
+       rake (>= 0.8.7)
+       thor (>= 0.18.1, < 2.0)
+-    rake (11.2.2)
+-    rdoc (4.2.2)
+-      json (~> 1.4)
+-    responders (2.2.0)
+-      railties (>= 4.2.0, < 5.1)
++    rake (13.0.6)
++    rdoc (6.3.3)
++    responders (2.4.1)
++      actionpack (>= 4.2.0, < 6.0)
++      railties (>= 4.2.0, < 6.0)
+     sass (3.2.19)
+     sass-rails (4.0.5)
+       railties (>= 4.0.0, < 5.0)
+       sass (~> 3.2.2)
+       sprockets (~> 2.8, < 3.0)
+       sprockets-rails (~> 2.0)
+-    sdoc (0.4.1)
+-      json (~> 1.7, >= 1.7.7)
+-      rdoc (~> 4.0)
+-    sprockets (2.12.4)
++    sdoc (2.4.0)
++      rdoc (>= 5.0)
++    sprockets (2.12.5)
+       hike (~> 1.2)
+       multi_json (~> 1.0)
+       rack (~> 1.0)
+@@ -134,17 +131,18 @@ GEM
+       actionpack (>= 3.0)
+       activesupport (>= 3.0)
+       sprockets (>= 2.8, < 4.0)
+-    sqlite3 (1.3.11)
+-    thor (0.19.1)
+-    thread_safe (0.3.5)
++    sqlite3 (1.3.13)
++    thor (1.2.1)
++    thread_safe (0.3.6)
+     tilt (1.4.1)
+-    turbolinks (2.5.3)
+-      coffee-rails
+-    tzinfo (1.2.2)
++    turbolinks (5.2.1)
++      turbolinks-source (~> 5.2)
++    turbolinks-source (5.2.0)
++    tzinfo (1.2.9)
+       thread_safe (~> 0.1)
+-    uglifier (3.0.0)
++    uglifier (4.2.0)
+       execjs (>= 0.3.0, < 3)
+-    warden (1.2.6)
++    warden (1.2.7)
+       rack (>= 1.0)
+ 
+ PLATFORMS
+@@ -157,9 +155,12 @@ DEPENDENCIES
+   jbuilder (~> 1.2)
+   jquery-rails
+   pg
+-  rails (= 4.2.6.rc1)
++  rails (= 4.2.8)
+   sass-rails (~> 4.0.0)
+   sdoc
+-  sqlite3
++  sqlite3 (~> 1.3.6)
+   turbolinks
+   uglifier (>= 1.3.0)
++
++BUNDLED WITH
++   1.17.3
+diff --git a/db/schema.rb b/db/schema.rb
+index e176243..745979f 100644
+--- a/db/schema.rb
++++ b/db/schema.rb
+@@ -13,7 +13,7 @@
+ 
+ ActiveRecord::Schema.define(version: 20140520013338) do
+ 
+-  create_table "companies", force: true do |t|
++  create_table "companies", force: :cascade do |t|
+     t.string   "name"
+     t.string   "manager"
+     t.string   "status"
+@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20140520013338) do
+     t.datetime "updated_at"
+   end
+ 
+-  create_table "employees", force: true do |t|
++  create_table "employees", force: :cascade do |t|
+     t.string   "name"
+     t.string   "phone"
+     t.string   "job_type"
+@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 20140520013338) do
+     t.datetime "updated_at"
+   end
+ 
+-  create_table "invoices", force: true do |t|
++  create_table "invoices", force: :cascade do |t|
+     t.datetime "date"
+     t.string   "company"
+     t.decimal  "tax"
+@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 20140520013338) do
+     t.integer  "employee_id"
+   end
+ 
+-  create_table "items", force: true do |t|
++  create_table "items", force: :cascade do |t|
+     t.string   "name"
+     t.integer  "quantity"
+     t.string   "category"
+@@ -51,7 +51,7 @@ ActiveRecord::Schema.define(version: 20140520013338) do
+ 
+   add_index "items", ["invoice_id"], name: "index_items_on_invoice_id"
+ 
+-  create_table "purchases", force: true do |t|
++  create_table "purchases", force: :cascade do |t|
+     t.string   "name"
+     t.string   "category"
+     t.integer  "quantity"
+@@ -63,7 +63,7 @@ ActiveRecord::Schema.define(version: 20140520013338) do
+ 
+   add_index "purchases", ["invoice_id"], name: "index_purchases_on_invoice_id"
+ 
+-  create_table "users", force: true do |t|
++  create_table "users", force: :cascade do |t|
+     t.string   "email",                  default: "", null: false
+     t.string   "encrypted_password",     default: "", null: false
+     t.string   "reset_password_token"
